@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>      
+        .banner{
+            background-image: url("image/sunplant_pic/asset\ 7.png");
+            width: 100%;
+            margin: auto;
+             
+        }
+        .Header{
+            width: 100%;
+            margin: auto;
+            display:flex;
+            flex-wrap: wrap;           
+        }
+        .Header img {width: 100%;}
+        .HeaderItemNav{ 
+            width:500px;
+            margin: auto;          
+        }
+        .NavItem
+        {
+            margin: 15px;           
+        }
+        .NavItem a{
+            font-size: 19px;
+            padding: 0 18px 0 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .HeaderItemLogo{
+            width: 500px;
+            margin: 15px;
+            padding: 6px;          
+        }
+        .LogoItem{
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        .HeaderItemSearch{           
+            width: 200px;
+            margin: auto;
+            display:flex;
+        }
+        .Search,.Login,.Cart{
+            width: 30px;
+            margin: 0 15px;
+            right: 50px;
+        }
+        .HeaderItemMarquee{
+            height: 800px;
+            margin: auto;                   
+            display:flex;
+        }
+        .MarqueeText{
+            padding: 0 50px;
+            margin: auto;            
+        }
+        .HeaderItemMarquee .MarqueeText h3{
+            font-size: 55px;
+            margin-bottom: 15px ;
+        }
+        .HeaderItemMarquee .MarqueeText p{
+            font-size: 25px;
+            margin-bottom: 30px 
+        }
+        .HeaderItemMarquee .MarqueeText button{           
+            width: 200px;
+            height: 50px;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+        .HeaderItemMarquee .MarqueeText button:hover{
+            background-color:rgb(84, 167, 235);
+        }
+        .MarqueeImg{
+            width: 700px;
+            margin: auto;
+        }
+        .MarqueeImg .img{
+            width: 500px;
+            margin: auto;           
+        }
+        .Introduction{
+            margin-top: 70px;
+        }
+        .IntroductionTitle{ 
+            text-align: center;      
+        }
+        .IntroductionTitle .Title h2{
+            font-size: 40px;
+            font-weight: 600;
+            font-family: sans-serif;
+            line-height: 50px;
+            color: #518432;
+            margin-bottom: 30px;            
+        }
+        .IntroductionTitle .Text p{
+            font-family: sans-serif;
+            font-style: italic;
+            color: rgb(146, 145, 145);
+            line-height: 20px;
+        }
+        .IntroductionText{
+            display: flex;
+            padding-top: 70px;           
+        }
+        .IntriductionTextItem1{
+            text-align: right ;
+            margin: 0 20px 0 145px ;
+        }
+        .InfoItem .InfoItemTitle{
+            font-size: 25px;
+            padding-bottom: 15px;
+                      
+        }
+        .InfoItem .InfoItemTitle h4{
+            font-weight: 700;
+            font-family: sans-serif;
+        }
+        .InfoItem .InfoItemText{
+            color: rgb(146, 145, 145);
+            font-family: sans-serif;
+            padding-bottom: 50px;
+        }
+        .IntriductionTextItem2{
+            margin: 0 150px 0 20px;
+        }
+        .StaffPick{
+            margin-top:45px;
+        }
+        .StaffPick h3{
+            text-align: center;
+            font-size: 40px;
+            font-family:sans-serif ;
+            color: #518432;
+            font-weight: 600;
+            padding-bottom: 50px;
+        }
+        .StaffPickItem{
+            width: 1450px;
+            margin: auto;
+            display: flex;
+        }
+        .StaffPickItemImg{
+            margin-bottom: 40px;
+        }
+        .StaffPickItemImg img{
+            width: 450px;
+            margin: 15px;
+        }
+        .StaffPickItemImg h4{
+            text-align: center;
+            font-family:sans-serif ;
+            font-weight: 600;
+            padding-bottom: 30px;
+        }
+        .StaffPickItemImg a{
+            text-decoration: none;
+            color: black;
+        }
+        .StaffPickItemImg a:hover{
+            color: #518432;           
+        }
+        .StaffPickItemImg img:hover{            
+            opacity: 0.3;
+        }
+        .StaffPickItemImg p{
+            font-size: 20px;
+            text-align: center;
+            font-family:sans-serif;
+            font-weight: 600;
+        }
+        .StaffPickItemImg span{
+            font-size: 12px;            
+        }
+        .VideoClips{
+            background-image: url("image/sunplant_pic/asset\ 43.png");
+            padding: 60px;
+            margin-top: 90px;           
+        }
+        .VideoClipsItem{
+            display: flex;
+            padding: 0 190px;
+        }
+        .VideoText, .Video{
+            margin: auto;
+        }
+        .VideoTextItem{
+            padding: 0 50px 0 90px;          
+        }
+        .VideoTextItem .Title h3{
+            text-align: center;
+            font-size: 35px;
+            font-family:sans-serif ;
+            color: #518432;
+            font-weight: 600;
+            padding: 0 40px 30px 0;
+            
+        }
+        .VideoTextItem .text p{
+            font-family:sans-serif ;
+            padding: 0 25px;
+            line-height: 25px;
+        }
+        .VideoTextItem .button{
+            padding: 20px 0 0 25px;            
+        }
+        .VideoTextItem button{
+            width: 170px;
+            height: 60px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            border: 1px solid;
+            background-color:whitesmoke;
+        }
+        .VideoTextItem button:hover{
+            background-color: #5f9b3a;
+            color: white;
+        }
+        .VideoItem{
+            padding: 30px 0 0 30px;
+        }
+        .VideoItem img{
+            width: 700px;
+        }
+        .ShopInstagram{
+            margin: 80px 0;            
+        }
+        .ShopInstagramItem{
+            text-align:center
+        }
+        .ShopInstagramItem .Img{
+            padding-bottom: 30px;
+        }
+        .ShopInstagramItem .Text{
+            font-size: 30px;
+            font-family:sans-serif ;
+            font-weight: 600;
+        }
+        .ShopInstagramImg{           
+            margin-top: 50px;                     
+        }
+        .ShopInstagramImg .Img{
+            width: 1650px;
+            margin: auto;
+            display: flex;
+            
+        }
+        .ShopInstagramImg .Img img{
+            width: 400px;
+            padding: 0 10px;
+        }
+        .ShopInstagramImg .Img img:hover{
+            opacity: 0.3;          
+        }
+
+    </style>
+</head>
+<body>
+        <div class="banner">
+            <div class="Header">
+                <div class="HeaderItemNav">
+                    <div class="NavItem">
+                        <nav>
+                            <a href="#">Home</a>
+                            <a href="#">Shop</a>
+                            <a href="#">Featured</a>
+                            <a href="#">Pages</a>
+                            <a href="#">Element</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="HeaderItemLogo">
+                    <div class="LogoItem">
+                        <img src="image/sunplant_pic/asset 6.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="HeaderItemSearch">
+                    <div class="Search">
+                        <a href="#"><img src="image/sunplant_pic/asset 44.svg" alt="搜尋"></a>
+                    </div>
+                    <div class="Login">
+                        <a href="#"><img src="image/sunplant_pic/asset 45.svg" alt="會員"></a>
+                    </div>
+                    <div class="Cart">
+                        <a href="#"><img src="image/sunplant_pic/asset 46.svg" alt="購物車"></a>
+                    </div>
+                    <div class="vaule"><P>0</P></div>
+                </div>
+            </div>
+            <div class="HeaderItemMarquee">
+                <div class="MarqueeText">
+                    <h3>Collection New</h3>
+                    <h3>Beautiful</h3>
+                    <p>form $69</p>
+                    <button>SHOP NOW</button>
+                </div>
+                <div class="MarqueeImg">
+                    <img src="image/sunplant_pic/asset 9.png" alt="產品圖">
+                </div>
+            </div>
+        </div>
+        <div class="Introduction">
+            <div class="IntroductionTitle">
+                <div class="Title">
+                    <h2>The important benefits of <br>
+                        greenery for the environment and health
+                    </h2>                   
+                </div>
+                <div class="Text">
+                    <p>Trees have always been considered as "lungs" of the earth. Planting lots of trees helps provide a great deal of oxygen for us to breathe.</p>
+                    <p>On average, one tree can provide enough oxygen for four people. At the same time they also absorb C02, ammonia, S02, .. in the world!</p>
+                </div>
+            </div>
+            <div class="IntroductionText">
+                <div class="IntriductionTextItem1">
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Reducing environmental pollution</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>Trees have always been considered as "lungs" of the earth.</p>
+                        </div>
+                    </div>
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Save water and reduce soil erosion</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>Trees can slow down the evaporation of water, increasing air humidity.</p>
+                        </div>
+                    </div>
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Reduce street temperatures</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>Planting more trees in densely populated areas will not only make the air there more fresh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="IntriductionTextImg">
+                    <div class="Item">
+                        <img src="image/sunplant_pic/asset 10.png" alt="產品圖">
+                    </div>
+                </div>
+                <div class="IntriductionTextItem2">
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Energy conservation</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>One tree can cool down, cool down 10 rooms</p>
+                        </div>
+                    </div>
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Prevent ultraviolet influence</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>Green trees become shade to block the sunlight from the road</p>
+                        </div>
+                    </div>
+                    <div class="InfoItem">
+                        <div class="InfoItemTitle">
+                            <h4>Improve human health</h4>
+                        </div>
+                        <div class="InfoItemText">
+                            <p>Living in a quiet, cool, clean and fresh environment will make your health better</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="StaffPick">
+            <h3>Staff.Pick</h3>
+            <div class="StaffPickItem">
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 11.png" alt="產品圖">
+                    <h4> <a href="#">Sapien Libero</a> </h4>
+                    <p>$150.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 13.png" alt="產品圖">
+                    <h4> <a href="#">Fringilla Augue 360</a></h4>                   
+                    <p><span>$200.00</span> $150.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 15.png" alt="產品圖">
+                    <h4> <a href="#">Faded Short Sleeves Variable</a></h4>                   
+                    <p><span>$200.00</span> $150.00</p>
+                </div>
+            </div>
+            <div class="StaffPickItem">
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 17.png" alt="產品圖">
+                    <h4> <a href="#">Purple Flowers</a></h4>
+                    <p>$180.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 19.png" alt="產品圖">
+                    <h4> <a href="#">Adipiscing Cursus Out Of Stock</a></h4>
+                    <p>$450.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 21.png" alt="產品圖">
+                    <h4><a href="#">Fringilla Augue</a></h4>
+                    <p>$320.00</p>
+                </div>
+            </div>
+            <div class="StaffPickItem">
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 23.png" alt="產品圖">
+                    <h4><a href="#">Purple Flowers</a></h4>                   
+                    <p><span>$200.00</span> $150.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 25.png" alt="產品圖">
+                    <h4><a href="#">Plant</a></h4>                   
+                    <p><span>$200.00</span> $150.00</p>
+                </div>
+                <div class="StaffPickItemImg">
+                    <img src="image/sunplant_pic/asset 26.png" alt="產品圖">
+                    <h4><a href="#">Plant Beautiful</a></h4>
+                    <p>$150.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="VideoClips">
+            <div class="VideoClipsItem">
+                <div class="VideoText">
+                    <div class="VideoTextItem">
+                        <div class="Title">
+                            <h3>A Number of our products</h3>
+                        </div>
+                        <div class="text">
+                            <p>Pick up all you need to keep your board in optimum condition with Decathlon’s set of surfboard accessories.</p>
+                        </div>
+                        <div class="button">
+                            <button>SHOP NOW</button>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="Video">
+                    <div class="VideoItem">
+                        <a href="https://www.youtube.com/watch?v=nkhpGC10OVw">
+                        <img src="image/sunplant_pic/asset 29.png" alt="影片圖">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ShopInstagram">
+            <div class="ShopInstagramItem">
+                <div class="Img">
+                    <img src="image/sunplant_pic/asset 52.svg" alt="裝飾圖">
+                </div>
+                <div class="Text">
+                    <h3>SHOP INSTAGRAM</h3>
+                </div>
+            </div>
+            <div class="ShopInstagramImg">
+                <div class="Img">
+                   <a href="#">
+                       <img src="image/sunplant_pic/asset 30.png" alt="產品圖">
+                   </a>
+                   <a href="#">
+                       <img src="image/sunplant_pic/asset 31.png" alt="產品圖">
+                   </a>
+                   <a href="#">
+                       <img src="image/sunplant_pic/asset 32.png" alt="產品圖">
+                   </a>
+                   <a href="#">
+                       <img src="image/sunplant_pic/asset 33.png" alt="產品圖">
+                   </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="FooterItem">
+                <div class="Logo">
+                    <img src="image/sunplant_pic/asset 6.png" alt="Logo">
+                </div>
+                <div class="Link">
+                    <a href="#">ABOUT US</a>
+                    <a href="#">CUSTOMER SERVICE</a>
+                    <a href="#">SUBSCRIPTION</a>
+                </div>
+                <div class="WebsiteLink"></div>
+                <div class="Text"></div>
+            </div>
+        </div>
+        
+</body>
+</html>
