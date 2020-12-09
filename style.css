@@ -121,6 +121,9 @@
 .health-content .col{
     text-align: right;
 }
+.about-pic img{
+    width: 100%;
+}
 .col-pic{
     width: 533px;  
 }
@@ -131,8 +134,29 @@
     opacity: .3;
 }
 .col-pic {
+   position: relative; 
    padding: 0 20px;
    text-align: center;
+}
+.health-content .col-pic .sale{
+    background-color: green;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+}
+.health-content .col-pic .sold-out{
+    background-color: green;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    left: 20px;
+    top: 40px;
 }
 .col-pic h4 a{
     font-family: sans-serif;
@@ -179,6 +203,10 @@
     padding: 15px 40px;
     letter-spacing: 2px;
 }
+.txt-list button:hover{
+    color: white;
+    background-color: green;
+}
 .video-item{
   width: 800px;
 }
@@ -200,6 +228,10 @@
     padding: 0 20px;
     vertical-align: top;  
 }
+.shop-instagram-pic img:hover{
+    transition:.7s;
+    filter: brightness(30%);
+}
 .main-footer{
     width: 100%;
     padding: 70px; 
@@ -208,13 +240,12 @@
     justify-content: center;
     background-color: rgb(233, 232, 232);
 }
-.footer-logo{
-   
-}
+
 .footer-logo img{
     width: 150px;
     padding-bottom: 30px;
-    ;
+    display: block;
+    margin: auto;
 }
 .footer-nav ul{   
     display: flex;
@@ -237,7 +268,7 @@
     background-color:black;
     position: absolute;
     left: -55px;
-    top: 0;
+    top: -20px;
     bottom: 0;
     margin: auto;
 }
