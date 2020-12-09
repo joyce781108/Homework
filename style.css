@@ -234,13 +234,17 @@
 }
 .main-footer{
     width: 100%;
-    padding: 70px; 
     display: flex;
+    padding: 50px 0;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 232, 232);
 }
-
+.footer-socaal-list{
+    width: 1600px;
+    padding: 10px;
+    margin: auto;
+}
 .footer-logo img{
     width: 150px;
     padding-bottom: 30px;
