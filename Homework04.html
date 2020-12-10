@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+            body{
+                padding-top: 400px;
+            }
+            .warp{
+                width: 1200px;
+                margin: auto;
+            }
+            .item{
+                display: flex;
+            }
+            .item > :first-child{
+                margin: -10% -20% 0 0;
+            }
+            .about{
+                width: 400px;
+                position: relative;
+                z-index: 4;
+            }
+            .main-title{
+                width: 350px;
+                height: 120px;
+                background-color: rgb(207, 2, 2);
+                color: white;
+                font-size: 50px;
+                text-align: end ;
+                
+            }
+            .main-title h2 {
+                padding: 40px 15px;
+            }
+            .txt{
+                width: 310px;
+                height: 180px;
+                padding: 20px;
+                background-color: black;
+                color: white;
+            }
+            .txt h3{
+                font-size: 25px;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+            .txt p{
+                font-size: 20px;
+                line-height: 30px;
+            }         
+            .pic img{
+                width: 100%;
+                display: block;
+                align-items: center;
+                position: relative;
+                z-index: 2;
+            }
+            .blank{
+                width: 400px;
+                height: 300px;
+                background-color: rgb(241, 241, 241);             
+                margin: -8% 0 0 -27%;
+                position: relative;
+                z-index: 1;
+            }           
+            .service{
+                width: 700px;
+                padding: 20px;
+                background-color: rgb(238, 237, 237);
+                margin-top: -2%;
+                position: relative;
+                z-index: 3;              
+            }
+            .service h2{
+                font-size:17px;
+                padding-bottom: 10px;
+                color: rgb(204, 0, 0);
+                font-weight: bold;
+            }
+            .service h2::after{
+                content: '';
+                height: 1.5px;
+                width: 500px;
+                background-color:rgb(204, 0, 0);
+                position: absolute;
+                top: 27px;
+                right: 40px;
+            }
+            .service h3{
+                display: block;
+                width: 105px;
+                height: 25px;
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                line-height: 25px;
+                border-radius: 2px;
+            }
+            .service p{
+                padding: 10px 20px;
+                color:rgb(109, 109, 109);
+                font-weight: bold;
+            }
+            .service p::before{
+                content: '';
+                width: 5px;
+                height: 5px;
+                background-color: rgb(204, 0, 0);
+                position: absolute;
+                left: 30px;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div class="warp">
+       <div class="item">           
+            <div class="about">
+                <div class="main-title">
+                    <h2>操控樂趣</h2>
+                </div>
+                <div class="txt">
+                    <h3>人人滿意的駕駛體驗</h3>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。
+                    </p>
+                </div>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/700/400/?random=21">                       
+            </div>
+            <div class="blank"></div>
+        </div>
+        <div class="service">
+            <h2>因為我們做了這些革新</h2>
+            <h3>低重心設計</h3>
+            <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</p>
+            <h3>車體剛性強化</h3>
+            <P>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性</P>
+            <h3>四輪獨立懸吊</h3>
+            <p>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
+        </div>
+        
+    </div>
+</body>
+</html>
