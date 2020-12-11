@@ -14,12 +14,11 @@
                 margin: auto;
             }
             .container{
-                width: 100%;
-                padding-bottom: 100px;
-                background-color: rosybrown;
+                padding-bottom: 80px;
             }
             .item{
                 display: flex;
+                justify-content: center;
             }
             .item > :first-child{
                 margin: -10% -20% 0 0;
@@ -64,8 +63,27 @@
                 position: relative;
                 z-index: 2;
             }
+            .button{
+                width: 70px;
+                height: 40px;
+                background-color: rgb(214, 0, 0);
+                position: absolute;                
+                z-index: 4;
+                top: 600px;
+                right: 280px;
+                bottom: 200px;
+                border: none;
+                padding:0 30px ;
+            }
+            .button div{
+                
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-left: 20px solid white;
+
+            }
             .blank{
-                width: 400px;
+                width: 404px;
                 height: 300px;
                 background-color: rgb(241, 241, 241);             
                 margin: -8% 0 0 -28%;
@@ -76,9 +94,9 @@
                 width: 700px;
                 padding: 20px;
                 background-color: rgb(238, 237, 237);
-                margin-top: -2%;
+                margin: -2% 0 0 15%;
                 position: relative;
-                z-index: 3;              
+                z-index: 3;         
             }
             .service h2{
                 font-size:17px;
@@ -121,9 +139,15 @@
             }
             .wrap .container:nth-of-type(2) .about{
                 order:1;
-                margin: -10% 0 0 -17%;
+                margin: -10% 0 0 -14%;
             }
-            
+            .wrap .container:nth-of-type(2) .service{
+                order:1;
+                margin: -2% 0 0 27%;
+            }
+            .wrap .container:nth-of-type(2) .blank{
+                height: 410px;
+            }
 
 
     </style>
@@ -143,8 +167,9 @@
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="https://picsum.photos/700/400/?random=21">                       
+                    <img src="https://picsum.photos/700/400/?random=21">                                      
                 </div>
+                <button class="button"><div></div></button>  
                 <div class="blank"></div>
             </div>
             <div class="service">
@@ -162,11 +187,35 @@
             <div class="item">           
                 <div class="about">
                     <div class="main-title">
-                        <h2>控樂趣</h2>
+                        <h2>安全守護</h2>
                     </div>
                     <div class="txt">
-                        <h3>人人滿意的駕駛體驗</h3>
-                        <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。
+                        <h3>行車更安心的高剛性車體</h3>
+                        <p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。毫無後顧之憂。</p>
+                    </div>
+                </div>
+                <div class="pic">
+                    <img src="https://picsum.photos/700/400/?random=21">                       
+                </div>
+                <div class="blank"></div>
+            </div>
+            <div class="service">
+                <h2>因為我們做了這些革新</h2>
+                <h3>主動安全</h3>
+                <p>以先進的TTS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
+                <h3>被動安全</h3>
+                <P>的高剛性車體，使用熱沖壓材料的高度抗扭鋼板，強化座艙對意外事故的保護力。</P>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item">           
+                <div class="about">
+                    <div class="main-title">
+                        <h2>乘坐舒適</h2>
+                    </div>
+                    <div class="txt">
+                        <h3>令人放鬆舒適的車室空間</h3>
+                        <p>車室空間設計著重人體工學，透過方向盤、踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕馭體驗。
                         </p>
                     </div>
                 </div>
@@ -177,15 +226,13 @@
             </div>
             <div class="service">
                 <h2>因為我們做了這些革新</h2>
-                <h3>低重心設計</h3>
-                <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</p>
-                <h3>車體剛性強化</h3>
-                <P>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性</P>
-                <h3>四輪獨立懸吊</h3>
-                <p>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
+                <h3>駕駛位置最佳化</h3>
+                <p>針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。</p>
+                <h3>駕馭視野佳</h3>
+                <P>考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕駛安全。</P>
+                <h3>更寧靜的車室</h3>
+                <p>採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</p>
             </div>
-        </div>
-        
     </div>
 </body>
 </html>
