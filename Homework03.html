@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body{
+            padding-top: 100PX;
+        }
+        .wrap{
+            width: 1200px;
+            margin: auto;
+            
+        }
+        h1{
+            font-size: 50px;
+            padding-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 360px;
+            height: 400px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            position: relative;          
+            color: white;
+            overflow: hidden;            
+        }
+        img{
+            object-fit: contain;
+            width: 360px;
+            border-radius: 50px;
+
+        }
+        .health-content {
+            width: 320px;
+            height: 60px;
+            padding: 0 20px;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            background-color: black;
+            transition: 1s;
+            opacity: .7;
+        }
+        .health-content h2{
+            padding: 20px 0;
+            font-size: 25px;           
+        }
+        .health-content p {
+            font-size: 25px;
+            padding-bottom: 20px;           
+        }
+        .item:hover .health-content{
+            height: 100px;           
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">       
+            <h1>寶寶紀錄</h1>        
+        <div class="container">                  
+            <div class="item">
+                <img src="image/baby_pic/01_20180411.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2018/04/11</h2>
+                    <p>第一次相遇，請多多指教!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/baby_pic/02_20180521.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2018/05/21</h2>
+                    <p>喝奶的姿勢有點帥!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/baby_pic/03_20180729.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2018/07/29</h2>
+                    <p>看我的小拳頭!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/baby_pic/04_20181005.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2018/10/05</h2>
+                    <p>正在學走路!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/baby_pic/05_20181118.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2018/11/18</h2>
+                    <p>姑姑婚禮，我是全場最帥的!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/baby_pic/06_20190208.jpg" alt="照片">
+                <div class="health-content ">
+                    <h2>2019/02/08</h2>
+                    <p>過年啦!紅包拿來~</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
