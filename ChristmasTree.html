@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .container{
+            width: 300px;
+            padding-top: 50px;
+            margin: auto;
+            background-color: darksalmon;
+        }
+        .item{
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+        .decoration{
+            width: 20px;
+            height: 20px;
+            background-color:red;
+            border-radius: 50%;
+            animation-name: discolor;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .item:nth-of-type(1) .position{
+            animation-delay: .5s;
+        }
+        .item:nth-of-type(2) .position1{           
+            animation-delay: .5s;
+        }       
+        .item:nth-of-type(3) .position{
+            animation-delay: .5s;
+        }
+        .position{
+            position: absolute;
+            bottom: -15px;
+            right: 60px;
+        }
+        .position1{
+            position: absolute;
+            bottom: -15px;
+            left: 60px;
+        }
+        .leaf{
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 80px solid green;
+
+        }
+        .item:nth-child(1) .leaf{
+            border-left: 80px solid transparent;
+            border-right: 90px solid transparent;
+            
+        }
+        .item:nth-child(1n+2) .leaf{
+            width: 30px;
+            margin-top: -30px;
+        }
+        
+        .trunk{
+            width: 60px;
+            height: 80px;
+            background-color: saddlebrown;           
+        }
+        @keyframes discolor{
+            0%{
+                background-color:orange;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <div class="position1 decoration"></div>
+                <div class="leaf"></div>
+                <div class="position decoration"></div>
+            </div>
+            <div class="item">
+                <div class="position1 decoration"></div>
+                <div class="leaf"></div>
+                <div class="position decoration"></div>
+            </div>
+            <div class="item">
+                <div class="position1 decoration"></div>
+                <div class="leaf"></div>
+                <div class="position decoration"></div>
+            </div>
+            <div class="item">
+                <div class="trunk"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
