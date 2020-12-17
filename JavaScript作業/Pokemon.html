@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(63, 189, 185);
+        }
+        .container{
+           text-align: center;                   
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 600; 
+        }
+        button{
+            font-size: 20px;
+            padding: 5px 5px;
+            border-radius: 50px;
+            border: 2px solid black;
+            transition: .4s;
+        }
+        button:hover{
+            background-color: black;
+            color: wheat;           
+        }
+
+    </style>
+</head>
+<body>
+        <div class="container">           
+            <h1>寶可夢圖鑑列表</h1>           
+            <button onclick="fetchPokemon()">載入寶可夢圖鑑列表</button>
+            <button onclick="fetchPokemon_child()">載入寶可夢圖鑑列表appendChild()</button>
+            <button onclick="Reset()">Reset</button>    
+            <div id="container"></div>   
+ 
+        </div>
+    
+    
+    
+    <script>
+        var container = document.getElementById('container');
+        window.onload = appendPokemon();
+
+        function appendPokemon(){
+            let img = document.createElement('img');
+            img.setAttribute('src','https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png');
+            container.appendChild(img);
+        }
+
+        function fetchPokemon(){
+            let pokemons ='';
+            for(let i = 1; i< 890;i++){
+                fileName = i.toString().padStart(3,'0');
+                pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                pokemonImg = `<img src='${pathFile}' >`;
+                pokemons += pokemonImg;
+            }
+            container.innerHTML = pokemons;
+        }
+
+        function fetchPokemon_child(){
+            for(let i = 2; i<890; i++){
+                let img = document.createElement('img');
+                fileName = i.toString().padStart(3,'0');
+                pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+                img.src = pathFile;
+                container.appendChild(img);
+            }          
+        }
+
+        function Reset(){
+            container.innerHTML = null;
+            appendPokemon();
+        }
+
+    </script>
+</body>
+</html>
