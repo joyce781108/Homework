@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/  
+   v2.0 | 20110126 
+   License: none (public domain) 
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.6667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+}
+
+.col-5 {
+  width: 41.666666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333%;
+}
+
+.col-8 {
+  width: 66.666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333%;
+}
+
+.col-11 {
+  width: 91.666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.333333%;
+  }
+  .col-md-2 {
+    width: 16.6667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.333333%;
+  }
+  .col-md-5 {
+    width: 41.666666%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.333333%;
+  }
+  .col-md-8 {
+    width: 66.666666%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.333333%;
+  }
+  .col-md-11 {
+    width: 91.666666%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .col-lg-1 {
+    width: 8.333333%;
+  }
+  .col-lg-2 {
+    width: 16.6667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.333333%;
+  }
+  .col-lg-5 {
+    width: 41.666666%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.333333%;
+  }
+  .col-lg-8 {
+    width: 66.666666%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.333333%;
+  }
+  .col-lg-11 {
+    width: 91.666666%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: 8.333333%;
+  }
+  .col-xl-2 {
+    width: 16.6667%;
+  }
+  .col-xl-3 {
+    width: 25%;
+  }
+  .col-xl-4 {
+    width: 33.333333%;
+  }
+  .col-xl-5 {
+    width: 41.666666%;
+  }
+  .col-xl-6 {
+    width: 50%;
+  }
+  .col-xl-7 {
+    width: 58.333333%;
+  }
+  .col-xl-8 {
+    width: 66.666666%;
+  }
+  .col-xl-9 {
+    width: 75%;
+  }
+  .col-xl-10 {
+    width: 83.333333%;
+  }
+  .col-xl-11 {
+    width: 91.666666%;
+  }
+  .col-xl-12 {
+    width: 100%;
+  }
+}
+
+body {
+  padding-top: 50px;
+  width: 100vw;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#menu {
+  position: absolute;
+  opacity: 0;
+}
+
+.header-nav {
+  width: 100%;
+  background-color: #0a3b63;
+  color: white;
+  position: fixed;
+  top: 0;
+}
+
+.header-nav .menu-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.header-nav .menu-btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+
+.header-nav .menu-btn::before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  left: 10px;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-box-shadow: 0 6px, 0 -6px;
+          box-shadow: 0 6px, 0 -6px;
+}
+
+.header-nav .logo {
+  height: 50px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header-nav .nav-item {
+  position: absolute;
+  top: 100%;
+  left: -90%;
+  background-color: #0a3b63;
+  height: calc(100vh - 50px);
+  width: 20%;
+  padding: 10px 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.header-nav #menu:checked + .header .header-nav .nav-item {
+  left: 0;
+}
+
+.header-nav .tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav .icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav i {
+  color: #0a416e;
+  font-size: 20px;
+}
+
+.header-nav .tel p {
+  opacity: 0;
+}
+
+.title-group {
+  background-color: #0a416e;
+  color: white;
+  text-align: center;
+}
+
+.title-group h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title-group p {
+  font-size: 18px;
+  color: #1970b8;
+  margin-top: 10px;
+}
+
+.advertising-item {
+  background-image: url(image/RWD切版/images/page01_img01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5% 0 50%;
+}
+
+.btn {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  background-color: darkorange;
+  border-radius: 50px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.txt {
+  margin: 40px 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.txt h2 {
+  font-size: 30px;
+}
+
+.txt h3 {
+  color: dimgray;
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+.txt p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.pic {
+  padding: 30px 20px 0;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.about {
+  padding: 20px;
+  background-color: #e7f1f5;
+}
+
+.health-content {
+  text-align: center;
+  padding: 0 10px;
+  margin: 50px 0;
+}
+
+.health-content h2 {
+  font-size: 40px;
+}
+
+.health-content i {
+  font-size: 70px;
+  padding: 50px 0 20px;
+  color: darkorange;
+}
+
+.health-content h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.health-content p {
+  font-size: 20px;
+  color: grey;
+  line-height: 30px;
+}
+
+.service {
+  background-color: #0a416e;
+  padding: 50px 10px;
+}
+
+.service h3 {
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.service p {
+  padding-bottom: 30px;
+}
+
+.service input {
+  padding: 15px 10px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.saying {
+  background-color: #f87d09;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.saying h4 {
+  padding: 10px;
+  font-size: 40px;
+}
+
+.saying img {
+  padding: 20px 0;
+}
+
+.saying p {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.saying p + p {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.saying .saying-pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.saying .saying-pagination li {
+  padding: 20px 5px;
+}
+
+.saying .saying-pagination a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.308);
+  border-radius: 50%;
+}
+
+.saying .saying-pagination ul li:last-child a {
+  background-color: white;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: #292929;
+  padding: 20px 0;
+}
+
+.footer .footer-title h2 {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 0 30px;
+}
+
+.footer .footer-nav {
+  padding: 20px 0;
+  line-height: 30px;
+}
+
+.footer .footer-nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.651);
+}
+
+.footer .footer-pic ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer-pic li {
+  padding: 10px;
+}
+
+.footer .footer-pic a {
+  color: white;
+}
+
+.footer hr {
+  height: .1px;
+  background-color: #585858;
+  border: none;
+}
+
+.footer p {
+  color: #585858;
+  font-size: 15px;
+  padding: 10px 20px 15px;
+  line-height: 20px;
+}
+
+.footer span {
+  color: white;
+}
+/*# sourceMappingURL=style_RWD.css.map */
