@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    .container-fluid{
+      padding: 20px;
+    }
+    .container-fluid h1{
+      padding-bottom: 20px;
+      font-weight: bold;     
+    }
+    .container-fluid button:hover{
+      background-color: black;
+      color: blanchedalmond;
+      transition: .3s;
+    }
+    .card{
+     padding: 0;
+     background-color:#faebf0;
+    }
+    .card:hover{
+      top: -4px;
+      box-shadow:5px 5px 15px black;
+      transition: .4s;
+    }
+    .card:hover .card-body{
+      background-color: turquoise;
+      transition: .4s;
+    }
+    .card-body{
+      background-color: #f8bb5f;
+    }
+    .card-body h5{
+      display: inline-block;
+      width: 250px;
+      height: 30px;
+      padding: 3px 10px;
+      background-color: black;
+      color:white;
+      border-radius: 50px;
+    }
+    .modal .text-primary p{
+      color: black;
+      font-family: monospace;
+      line-height: 30px;
+      font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid text-center">
+    <h1 class="jumbotron">寶可夢圖鑑列表</h1>
+    <button id="loadingbutton">載入全部</button>
+    <div class="row justify-content-center p-4"></div>
+  </div>
+
+
+  <template id="cardPokemon">
+    <div class="card m-3 border-2 border-dark" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body text-start">
+        <h5 class="card-title"></h5>
+        <p class="card-text fs-5 fw-bold"></p>
+        <a href="#" class="btn btn-primary">詳細內容</a>
+      </div>
+    </div>
+  </template>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="pokemonImage">
+          <div id="description" class="text-primary"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script>
+    window.onload = getPokemonJSON();
+    let row = document.querySelector(".row");
+    let modal = document.querySelector("#exampleModal");
+    let _p = document.createElement("p");
+    let pokemonArrayNew = [];
+    let card;
+
+    document.getElementById("loadingbutton").addEventListener("click", function () {
+      cardcontent();
+    });
+
+    window.onload = function () {
+      getPokemonJSON();
+    };
+
+    function getPokemonJSON() {
+      let xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        pokemonArray = JSON.parse(this.responseText);
+        TransformData(pokemonArray);
+      };
+      xhr.open("GET", "https://raw.githubusercontent.com/apprunner/pokemon.json/master/pokedex.json");
+      xhr.send();
+    };
+
+    function TransformData(dataArray) {
+      dataArray.forEach(item => {
+        let id = item.id.toString().padStart(3, "0");
+        let name = item.name.chinese;
+        let hp = item.base.HP;
+        let attack = item.base.Attack;
+        let defense = item.base.Defense;
+        let sp_Attack = item.base["Sp. Attack"];
+        let sp_Defense = item.base["Sp. Defense"];
+        let speed = item.base.Speed;
+        let img = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`;
+
+        let obj = {
+          Id: id,
+          Name: name,         
+          Hp: hp,
+          Attack: attack,
+          Defense: defense,
+          Sp_Attack: sp_Attack,
+          Sp_Defense: sp_Defense,
+          Speed: speed,
+          Img: img                 
+        };
+        pokemonArrayNew.push(obj)
+      });
+    };
+
+    function cardcontent() {
+      let cardPokemon = document.querySelector("#cardPokemon");
+      if (row.innerText == "") {
+        pokemonArrayNew.forEach(item => {
+
+          card = cardPokemon.content.cloneNode(true);
+          card.querySelector("h5").innerText = item.Id;
+          card.querySelector("p").innerText = item.Name;
+          card.querySelector("img").src = item.Img;
+          card.querySelector(".btn").setAttribute("data-bs-toggle", "modal");
+          card.querySelector(".btn").setAttribute("data-bs-target", "#exampleModal");
+          modalcontent(card, item); 
+          row.appendChild(card);
+        });
+      };
+    };
+
+    function modalcontent(card, item) {
+      card.querySelector(".btn").addEventListener("click", function () {
+        modal.querySelector("h5").innerText = item.Name;
+        modal.querySelector("#pokemonImage").src = item.Img;
+
+        addmodal(item);
+      });
+    }
+
+
+    function addmodal(item) {
+      let keys = Object.keys(item);
+      let values = Object.values(item);
+      let _innerText = "";
+      keys.length = 8;
+      for (var i = 2; i < keys.length ; i++) {
+        _innerText += keys[i] + ":" + values[i] + "\n";         
+        }       
+      let modalbody = document.querySelector("#description");        
+        _p.innerText = _innerText;
+        modalbody.appendChild(_p);
+    }
+  </script>
+
+</body>
+
+</html>
