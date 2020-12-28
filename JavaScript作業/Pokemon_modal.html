@@ -116,10 +116,6 @@
       cardcontent();
     });
 
-    window.onload = function () {
-      getPokemonJSON();
-    };
-
     function getPokemonJSON() {
       let xhr = new XMLHttpRequest();
       xhr.onload = function () {
@@ -132,6 +128,7 @@
 
     function TransformData(dataArray) {
       dataArray.forEach(item => {
+       
         let id = item.id.toString().padStart(3, "0");
         let name = item.name.chinese;
         let hp = item.base.HP;
@@ -161,7 +158,7 @@
       let cardPokemon = document.querySelector("#cardPokemon");
       if (row.innerText == "") {
         pokemonArrayNew.forEach(item => {
-
+         
           card = cardPokemon.content.cloneNode(true);
           card.querySelector("h5").innerText = item.Id;
           card.querySelector("p").innerText = item.Name;
