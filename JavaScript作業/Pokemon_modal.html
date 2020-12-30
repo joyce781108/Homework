@@ -157,8 +157,7 @@
     function cardcontent() {
       let cardPokemon = document.querySelector("#cardPokemon");
       if (row.innerText == "") {
-        pokemonArrayNew.forEach(item => {
-         
+        pokemonArrayNew.forEach(item => {        
           card = cardPokemon.content.cloneNode(true);
           card.querySelector("h5").innerText = item.Id;
           card.querySelector("p").innerText = item.Name;
