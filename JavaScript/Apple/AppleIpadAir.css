@@ -1,0 +1,81 @@
+.products img {
+  width: 100%;
+}
+
+.section-block {
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-title p {
+  color: #C04A03;
+  font-weight: 600;
+}
+
+.main-title h1 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 40px;
+}
+
+h7 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.btn-group {
+  border: 1px solid #D2D2D7;
+  background-color: white;
+  width: 197px;
+  height: 102px;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: inline-block;
+  line-height: 25px;
+}
+
+.exterior .color-item {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.exterior p {
+  font-size: 12px;
+  color: #545457;
+}
+
+.exterior .gray {
+  background-color: #B0B3B5;
+}
+
+.exterior .silver {
+  background-color: #DFE1E0;
+}
+
+.exterior .rose {
+  background-color: #ECCBC4;
+}
+
+.exterior .green {
+  background-color: #CCDDCA;
+}
+
+.exterior .blue {
+  background-color: #CBDAE6;
+}
+
+.storageDevice span {
+  font-size: 29px;
+}
+
+.GB :first-child {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+p + p {
+  font-size: 12px;
+}
+/*# sourceMappingURL=AppleIpadAir.css.map */
