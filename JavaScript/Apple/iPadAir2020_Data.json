@@ -2,11 +2,18 @@
     {
         "iPadAir": {
             "color": {
-                "太空灰色": "gray",
-                "銀色": "silver",
-                "玫瑰金色": "rose",
-                "綠色": "green",
-                "天藍色": "blue"
+                "gray":"太空灰色",
+                "silver":"銀色" ,
+                "rose":"玫瑰金色",
+                "green":"綠色",
+                "blue":"天藍色" 
+            },
+            "colorCode":{
+                "gray":":#B0B3B5",
+                "silver":"#DFE1E0",
+                "rose":"#ECCBC4",
+                "green":" #CCDDCA",
+                "blue":"#CBDAE6" 
             },
             "storageLow": {
                 "wi-fi": 18900,
@@ -21,9 +28,14 @@
     {
         "iPad": {
             "color": {
-                "太空灰色": "gray",
-                "銀色": "silver",
-                "金色": "gold"
+                "gray":"太空灰色",
+                "silver":"銀色",
+                "gold":"金色"
+            },
+            "colorCode":{
+                "gray":":#B0B3B5",
+                "silver":"#DFE1E0",
+                "gold":"#EECFC0" 
             },
             "storageLow": {
                 "wi-fi": 10500,
