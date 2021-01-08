@@ -1,6 +1,7 @@
 [
     {
-        "iPad Air": {
+        
+            "name":"iPad Air",
             "color": {
                 "gray":"太空灰色",
                 "silver":"銀色" ,
@@ -23,10 +24,11 @@
                 "wi-fi": 23900,
                 "cellular": 28200
             }
-        }
+        
     },
     {
-        "iPad": {
+        
+            "name":"iPad",
             "color": {
                 "gray":"太空灰色",
                 "silver":"銀色",
@@ -45,6 +47,6 @@
                 "wi-fi": 13500,
                 "cellular": 17800
             }
-        }
+        
     }
 ]
