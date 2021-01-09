@@ -1,6 +1,6 @@
 [
     {
-        
+            "category":"iPad",
             "name":"iPad Air",
             "color": {
                 "gray":"太空灰色",
@@ -27,7 +27,7 @@
         
     },
     {
-        
+            "category":"iPad",
             "name":"iPad",
             "color": {
                 "gray":"太空灰色",
