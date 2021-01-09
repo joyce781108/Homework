@@ -1,4 +1,67 @@
-.products img {
+.title {
+  width: 100%;
+  background-color: #333333;
+}
+
+.title ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title i {
+  color: white;
+  font-size: 30px;
+  padding: 0 50px;
+}
+
+.title li {
+  padding: 20px 50px;
+  font-size: 30px;
+}
+
+.title a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav {
+  width: 100%;
+  background-color: black;
+}
+
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav li {
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav i {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
+
+.productPic img {
   width: 100%;
 }
 
@@ -15,13 +78,14 @@
   font-weight: 600;
 }
 
-.main-title h1 {
-  font-family: 'Noto Sans TC', sans-serif;
+.main-title h2 {
+  font-family: sans-serif;
   font-size: 40px;
+  font-weight: bold;
 }
 
-h7 {
-  font-family: 'Noto Sans TC', sans-serif;
+h3 {
+  font-family: sans-serif;
 }
 
 .btn-group {
@@ -45,26 +109,6 @@ h7 {
 .exterior p {
   font-size: 12px;
   color: #545457;
-}
-
-.exterior .gray {
-  background-color: #B0B3B5;
-}
-
-.exterior .silver {
-  background-color: #DFE1E0;
-}
-
-.exterior .rose {
-  background-color: #ECCBC4;
-}
-
-.exterior .green {
-  background-color: #CCDDCA;
-}
-
-.exterior .blue {
-  background-color: #CBDAE6;
 }
 
 .storageDevice span {

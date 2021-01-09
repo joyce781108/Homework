@@ -1,137 +1,192 @@
 let storage = document.getElementById("storage");
+let network = document.getElementById("network");
 let color = document.getElementById("color");
-let totalText = document.getElementById("total");
-let nav = document.getElementById("nav")
-let ipadArray = [];
-let total = 0;
+let nav = document.getElementById("nav");
+let title = document.getElementById("title")
+
+let appleArray = [];
 let selectList = {};
-
-
+let selectTitleList = {};
+let total = 0;
+let colorGroup, row, btn, span, p, img;
+let colorkeys;
+let wifiText, cellularText, wifiHigh, cellularHigh, wifiLow, cellularLow, totalText;
 
 window.onload = () => {
-    // btnDisabled("storage", "text", true);
-    // btnDisabled("network", "text", true);
+    btnDisabled("storage", "text", true);
+    btnDisabled("network", "text", true);
     requestIpadJson();
 
 };
 
-let url = "https://raw.githubusercontent.com/joyce781108/Homework/main/JavaScript/Apple/iPadAir2020_Data.json";
+let url = "https://raw.githubusercontent.com/joyce781108/Homework/main/JavaScript/Apple/iPadAir2020_Data2.json";
 function requestIpadJson() {
     let xhr = new XMLHttpRequest();
     xhr.onload = function () {
-        ipadArray = JSON.parse(this.responseText)
+        appleArray = JSON.parse(this.responseText)
     };
     xhr.open("GET", url);
     xhr.send();
 };
 
-nav.querySelectorAll("li").forEach((x) => {
-    x.addEventListener("click", function () {
-
-        let selectNav = x.innerText;
-        let data = ipadArray.find(y => y.name == selectNav);
-        console.log(data);
-        let i = Object.keys(ipadArray);
-        let a = Object.values(ipadArray);
+title.querySelectorAll("a").forEach((x) =>{
+    x.addEventListener("click",function (){
         
-    
-        console.dir(i)
-        console.dir(a)
-    
+        let selectTitle = x.innerText;
+        selectTitleList = appleArray.find(y => y.category == selectTitle);
+        console.log(selectTitleList)
+    })
+})
 
-
+nav.querySelectorAll("span").forEach((x) => {
+    x.addEventListener("click", function () {
+        let selectNav = x.innerText;
+        selectList = appleArray.find(y => y.name == selectNav);
+        document.querySelector("h2").innerText = `購買 ${selectNav}`
         picData(selectNav);
+        colorBtnData(selectList);
+        colorBtnClick(selectNav);
+        startingPrice();
     })
 });
 
 function picData(selectNav) {
-        let img = document.createElement("img");
-        img.id = "pic";
-        let productPic = document.getElementsByClassName("productPic")[0];
-        productPic.innerHTML = null;
-        productPic.appendChild(img);
-        let item = `./image/${selectNav}/all.png`;
-        img.src = item;
+    let productPic = document.getElementsByClassName("productPic")[0];
+    img = document.createElement("img");
+    productPic.innerHTML = null;
+    productPic.appendChild(img);
+    let item = `./image/${selectNav}/all.png`;
+    img.src = item;
 }
 
-color.querySelectorAll("button").forEach((x) => {
+function colorBtnClick(selectNav) {
+    color.querySelectorAll("button").forEach((x) => {
+        x.addEventListener("click", function () {
+            selectColorBtn(x, selectNav);
+            btnDisabled("storage", "text", false);
+        });
+    });
+}
+
+
+function selectColorBtn(item, selectNav) {
+    let colorName = item.innerText;
+    let color = colorkeys.find(x => selectList.color[x] == colorName);
+    img.src = `./image/${selectNav}/${color}.png`;
+}
+
+
+function colorBtnData(selectList) {
+    let color = selectList.color;
+    colorkeys = Object.keys(color)
+    colorGroup = document.getElementsByClassName("color-group")[0];
+    row = document.createElement("row");
+    row.className = "row";
+    colorGroup.innerHTML = null;
+
+    colorkeys.forEach(x => {
+        p = document.createElement("p");
+        btn = document.createElement("button");
+        span = document.createElement("span");
+        btn.className = "btn-group";
+        span.className = "color-item";
+        p.innerText = selectList.color[x];
+        span.style = `background-color:${selectList.colorCode[x]}`;
+        btn.append(span, p);
+        row.appendChild(btn);
+    })
+
+    colorGroup.appendChild(row);
+}
+
+storage.querySelectorAll("button").forEach((x) => {
+    x.addEventListener("click", function (e) {
+        selectStorage(x);
+        btnDisabled("network", "text", false);
+    });
+
+});
+
+network.querySelectorAll("button").forEach((x) => {
     x.addEventListener("click", function () {
-        selectColorBtn(x);
-        btnDisabled("storage", "text", false);
+        selectNetork(x);
+
     });
 });
 
-function selectColorBtn(item) {
-    let pic = document.getElementById("pic");
-    let colorName = item.innerText;
-    selectList = ipadArray.filter(x => x.color == colorName)
-    let imgUrl = `./image/${selectNav}/${selectList[0].picture}`;
-    pic.src = imgUrl;
+
+
+function btnDisabled(id, className, bool) {
+    let _id = document.getElementById(id);
+    let btn = _id.getElementsByClassName(className);
+    btn = Array.from(btn);
+    btn.forEach(x => {
+        if (bool == true) {
+            x.setAttribute('disabled', bool);
+        }
+        if (bool == false) {
+            x.removeAttribute('disabled');
+        }
+    });
+};
+
+function startingPrice() {
+    wifiText = document.querySelector("#WiFi p+p");
+    cellularText = document.querySelector("#Cellular p+p");
+    totalText = document.getElementById("total");
+    wifiHigh = selectList.storageHigh["wi-fi"];
+    cellularHigh = selectList.storageHigh["cellular"];
+    wifiLow = selectList.storageLow["wi-fi"];
+    cellularLow = selectList.storageLow["cellular"];
+    storage64Text = document.querySelector("#storage64 p+p");
+    storage256Text = document.querySelector("#storage256 p+p");
+
+    storage64Text.innerHTML = `NT$ ${wifiLow.toLocaleString("zh-tw")} 起`;
+    storage256Text.innerHTML = `NT$ ${cellularHigh.toLocaleString("zh-tw")} 起`;
+    wifiText.innerHTML = `NT$ ${wifiLow.toLocaleString("zh-tw")} 起`;
+    cellularText.innerHTML = `NT$ ${cellularLow.toLocaleString("zh-tw")} 起`;
+    totalText.innerHTML = `NT$ ${wifiLow.toLocaleString("zh-tw")} 起`;
 }
 
-function colorBtnTemplate(){
-    let colorGroup = document.getElementsByClassName("color-group")[0];
-    let row = document.createElement("row");
-    row.className = "row";
-    let btn = document.createElement("button");
-    btn.className = "btn-group";
-    let span = document.createElement("span");
-    span.className = "color-item";
-    let p = document.createElement("p");
-    colorGroup.appendChild(row);
-    row.appendChild(btn);
-    btn.append(span,p);
-    
 
 
-}
+let _storage = '';
 
+function selectStorage(item) {
+    if (item.id == "storage64") {
+        _storage = 'storage64';
+        total = wifiLow;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")} 起`;
+        wifiText.innerHTML = `NT$ ${wifiLow.toLocaleString("zh-tw")} 起`;
+        cellularText.innerHTML = `NT$ ${cellularLow.toLocaleString("zh-tw")} 起`;
+    }
+    if (item.id == "storage256") {
+        _storage = 'storage256';
+        total = wifiHigh;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")} 起`;
+        wifiText.innerHTML = `NT$ ${wifiHigh.toLocaleString("zh-tw")} 起`;
+        cellularText.innerHTML = `NT$ ${cellularHigh.toLocaleString("zh-tw")} 起`;
+    }
+};
 
+function selectNetork(item) {
+    if (item.id == "WiFi" && _storage == 'storage64') {
+        total = wifiLow;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")}`
+    }
+    if (item.id == "WiFi" && _storage == 'storage256') {
+        total = wifiHigh;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")}`
+    }
 
-// storage.querySelectorAll("button").forEach((x) => {
-//     x.addEventListener("click", function () {
-//         selectStorage(x)
-//     })
-// })
+    if (item.id == "Cellular" && _storage == 'storage64') {
+        total = cellularLow;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")}`
+    }
 
-
-
-// function btnDisabled(id, className, bool) {
-//     let _id = document.getElementById(id);
-//     let btn = _id.getElementsByClassName(className);
-//     btn = Array.from(btn);
-//     btn.forEach(x => {
-//         if (bool == true) {
-//             x.setAttribute('disabled', bool);
-//         }
-//         if (bool == false) {
-//             x.removeAttribute('disabled');
-//         }
-
-//     });
-// }
-
-// function selectStorage(item) {
-//     let storage64 = document.getElementById("storage64");
-//     let storage256 = document.getElementById("storage256");
-//     if (item.id == "storage64") {
-//         selectList = ipadArray.find(x => x.storage == "64GB")
-//         total = selectList.price;
-//         totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")} 起`
-//     }
-//     if(item.id == "storage256"){
-//         selectList = ipadArray.find(x => x.storage == "256GB")
-//         total = selectList.price;
-//         totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")} 起`
-//     }
-
-
-
-
-// }
-
-// function calculateTotal(money) {
-
-// }
-
+    if (item.id == "Cellular" && _storage == 'storage256') {
+        total = cellularHigh;
+        totalText.innerHTML = `NT$ ${total.toLocaleString("zh-tw")}`
+    }
+};
 
