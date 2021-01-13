@@ -1,0 +1,240 @@
+[
+    {
+            "category":"iPad",
+            "name":"iPad Air",
+            "model":{
+                "iPadAir":{
+                    "storage64": {
+                        "wi-fi": 18900,
+                        "cellular": 23200
+                    },
+                    "storage256": {
+                        "wi-fi": 23900,
+                        "cellular": 28200
+                    }
+                }
+            },
+            "color": {
+                "gray":"太空灰色",
+                "silver":"銀色" ,
+                "rose":"玫瑰金色",
+                "green":"綠色",
+                "blue":"天藍色" 
+            },
+            "colorCode":{
+                "gray":"#B0B3B5",
+                "silver":"#DFE1E0",
+                "rose":"#ECCBC4",
+                "green":" #CCDDCA",
+                "blue":"#CBDAE6" 
+            }
+    },
+    {
+            "category":"iPad",
+            "name":"iPad",
+            "model":{
+                "iPad":{
+                    "storage32": {
+                        "wi-fi": 10500,
+                        "cellular": 14800
+                    },
+                    "storage128": {
+                        "wi-fi": 13500,
+                        "cellular": 17800
+                    }
+                }
+            },
+            "color": {
+                "gray":"太空灰色",
+                "silver":"銀色",
+                "gold":"金色"
+            },
+            "colorCode":{
+                "gray":"#B0B3B5",
+                "silver":"#DFE1E0",
+                "gold":"#EECFC0" 
+            }
+    },
+    {
+        "category":"iPad",
+            "name":"iPad Pro",
+            "model":{
+                "model11":{
+                    "storage128": {
+                        "wi-fi": 25900,
+                        "cellular": 30900
+                    },
+                    "storage256": {
+                        "wi-fi": 29400,
+                        "cellular": 34400
+                    },
+                    "storage512":{
+                        "wi-fi": 36400,
+                        "cellular": 41400
+                    },
+                    "storage1":{
+                        "wi-fi": 43400,
+                        "cellular": 48400
+                    }
+                },
+                "model12.9":{
+                    "storage128": {
+                        "wi-fi": 32900,
+                        "cellular": 37900
+                    },
+                    "storage256": {
+                        "wi-fi": 36400,
+                        "cellular": 41400
+                    },
+                    "storage512":{
+                        "wi-fi": 43400,
+                        "cellular": 48400
+                    },
+                    "storage1T":{
+                        "wi-fi": 50400,
+                        "cellular": 55400
+                    }
+                }
+            },
+            "color": {
+                "gray":"太空灰色",
+                "silver":"銀色"
+            },
+            "colorCode":{
+                "gray":"#B0B3B5",
+                "silver":"#DFE1E0"
+            }
+            
+    },
+    {
+        "category":"iPad",
+        "name":"iPad mini",
+        "color": {
+            "gray":"太空灰色",
+            "silver":"銀色",
+            "gold":"金色"
+        },
+        "colorCode":{
+            "gray":"#B0B3B5",
+            "silver":"#DFE1E0",
+            "gold":"#EECFC0" 
+        },
+        "storage64": {
+            "wi-fi": 12900,
+            "cellular": 17400
+        },
+        "storage256": {
+            "wi-fi": 17900,
+            "cellular": 22400
+        }
+    },
+    {
+        "category":"iPhone",
+            "name":"iPhone 12",
+            "model":{
+                "iPhone12Mini":{
+                    "monitor":5.4,
+                    "storage64": 23900,
+                    "storage128": 25500,
+                    "storage256": 29000
+                },
+                "iPhone12":{
+                    "monitor":6.1,
+                    "storage64": 26900,
+                    "storage128": 28500,
+                    "storage256": 32000
+                }
+            },
+            "color": {
+                "White":"白色",
+                "black":"黑色" ,
+                "blue":"藍色",
+                "green":"綠色",
+                "red":"紅色"
+            },
+            "colorCode":{
+                "White":"#F7F3F0",
+                "black":"#35313A",
+                "blue":"#12496C", 
+                "green":" #CCDDCA",
+                "red":"#DA3F3F"
+            }
+    },
+    {
+        "category":"iPhone",
+            "name":"iPhone 12 Pro",
+            "model":{
+                "iPhone12Pro":{
+                    "monitor":6.1,
+                    "storage64": 23900,
+                    "storage128": 25500,
+                    "storage256": 29000
+                },
+                "iPhone12ProMax":{
+                    "monitor":6.7,
+                    "storage64": 26900,
+                    "storage128": 28500,
+                    "storage256": 32000
+                }
+            },
+            "color": {
+                "graphite":"石墨色",
+                "silver":"銀色",
+                "gold":"金色",
+                "blue":"太平洋藍色"
+            },
+            "colorCode":{
+                "graphite":"#5A5955",
+                "silver":"#DFE1E0",
+                "gold":"#EECFC0",
+                "blue":"#405D6B"
+            }
+    },
+    {
+        "category":"iPhone",
+            "name":"iPhone SE",
+            "model":{
+                "iPhoneSE":{
+                    "storage64": 13900,
+                    "storage128": 15500,
+                    "storage256": 19000
+            },
+            "color": {
+                "White":"白色",
+                "black":"黑色",
+                "red":"紅色"
+            },
+            "colorCode":{
+                "White":"#F7F3F0",
+                "black":"#35313A",
+                "red":"#DA3F3F"
+            }
+        }
+    },
+    {
+        "category":"iPhone",
+            "name":"iPhone 11",
+            "model":{
+                "iPhone11":{
+                    "storage64": 19900,
+                    "storage128": 21500,
+                    "storage256": 25000
+            },
+            "color": {
+                "White":"白色",
+                "black":"黑色",
+                "green":"綠色",
+                "yellow":"黃色",
+                "purple":"紫色",
+                "red":"紅色"
+            },
+            "colorCode":{
+                "White":"#F7F3F0",
+                "black":"#35313A",
+                "yellow":"#FFE681",
+                "purple":"#D1CDDB",
+                "red":"#DA3F3F"
+            }
+        }
+    }
+]
