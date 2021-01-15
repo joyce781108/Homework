@@ -5,8 +5,8 @@
             {
                 "productID":"iPad Air",
                 "model":[
-                    {"size":"none","storage":64,"unit":"GB","wi-fi": 18900,"cellular": 23200,"description":"iPad Air"},
-                    {"size":"none","storage":256,"unit":"GB","wi-fi": 23900,"cellular": 28200,"description":"iPad Air"}
+                    {"size":"none","storage":64,"unit":"GB","wifi": 18900,"cellular": 23200,"description":"iPad Air"},
+                    {"size":"none","storage":256,"unit":"GB","wifi": 23900,"cellular": 28200,"description":"iPad Air"}
                 ],
                 "color":[
                     {"colorID":"gray","colorCode": "#B0B3B5","description": "太空灰色"},
@@ -19,8 +19,8 @@
             {
                 "productID":"iPad",
                 "model":[
-                    {"size":"none","storage":32,"unit":"GB","wi-fi": 10500,"cellular": 14800,"description":"iPad"},
-                    {"size":"none","storage":128,"unit":"GB","wi-fi": 13500,"cellular": 17800,"description":"iPad"}
+                    {"size":"none","storage":32,"unit":"GB","wifi": 10500,"cellular": 14800,"description":"iPad"},
+                    {"size":"none","storage":128,"unit":"GB","wifi": 13500,"cellular": 17800,"description":"iPad"}
                 ],
                 "color":[
                     {"colorID":"gray","colorCode": "#B0B3B5","description": "太空灰色"},
@@ -31,15 +31,15 @@
             {
                 "productID":"iPad Pro",
                 "model":[
-                    {"size":"11","storage":128,"unit":"GB","wi-fi": 25900,"cellular": 30900,"description":"iPad Pro"},
-                    {"size":"11","storage":256,"unit":"GB","wi-fi": 29400,"cellular": 34400,"description":"iPad Pro"},
-                    {"size":"11","storage":512,"unit":"GB","wi-fi": 36400,"cellular": 41400,"description":"iPad Pro"},
-                    {"size":"11","storage":1,"unit":"TB","wi-fi": 43400,"cellular": 48400,"description":"iPad Pro"},
+                    {"size":"11","storage":128,"unit":"GB","wifi": 25900,"cellular": 30900,"description":"iPad Pro"},
+                    {"size":"11","storage":256,"unit":"GB","wifi": 29400,"cellular": 34400,"description":"iPad Pro"},
+                    {"size":"11","storage":512,"unit":"GB","wifi": 36400,"cellular": 41400,"description":"iPad Pro"},
+                    {"size":"11","storage":1,"unit":"TB","wifi": 43400,"cellular": 48400,"description":"iPad Pro"},
     
-                    {"size":"12.9","storage":128,"unit":"GB","wi-fi": 32900,"cellular": 37900,"description":"iPad Pro"},
-                    {"size":"12.9","storage":256,"unit":"GB","wi-fi": 36400,"cellular": 41400,"description":"iPad Pro"},
-                    {"size":"12.9","storage":512,"unit":"GB","wi-fi": 43400,"cellular": 48400,"description":"iPad Pro"},
-                    {"size":"12.9","storage":1,"unit":"TB","wi-fi": 50400,"cellular": 55400,"description":"iPad Pro"}
+                    {"size":"12.9","storage":128,"unit":"GB","wifi": 32900,"cellular": 37900,"description":"iPad Pro"},
+                    {"size":"12.9","storage":256,"unit":"GB","wifi": 36400,"cellular": 41400,"description":"iPad Pro"},
+                    {"size":"12.9","storage":512,"unit":"GB","wifi": 43400,"cellular": 48400,"description":"iPad Pro"},
+                    {"size":"12.9","storage":1,"unit":"TB","wifi": 50400,"cellular": 55400,"description":"iPad Pro"}
                 ],
                 "color":[
                     {"colorID":"gray","colorCode": "#B0B3B5","description": "太空灰色"},
@@ -49,8 +49,8 @@
             {
                 "productID":"iPad Mini",
                 "model":[
-                    {"size":"none","storage":64,"unit":"GB","wi-fi": 12900,"cellular": 17400,"description":"iPad Mini"},
-                    {"size":"none","storage":256,"unit":"GB","wi-fi": 17900,"cellular": 22400,"description":"iPad Mini"}
+                    {"size":"none","storage":64,"unit":"GB","wifi": 12900,"cellular": 17400,"description":"iPad Mini"},
+                    {"size":"none","storage":256,"unit":"GB","wifi": 17900,"cellular": 22400,"description":"iPad Mini"}
                 ],
                 "color":[
                     {"colorID":"gray","colorCode": "#B0B3B5","description": "太空灰色"},
@@ -66,9 +66,9 @@
             {
                 "productID":"iPhone 11",
                 "model":[
-                    {"size":"none","storage":64,"unit":"GB","wi-fi": 19900,"cellular": "none","description":"iPhone 11"},
-                    {"size":"none","storage":128,"unit":"GB","wi-fi": 21500,"cellular": "none","description":"iPhone 11"},
-                    {"size":"none","storage":256,"unit":"GB","wi-fi": 25000,"cellular": "none","description":"iPhone 11"}
+                    {"size":"none","storage":64,"unit":"GB","wifi": 19900,"cellular": "none","description":"iPhone 11"},
+                    {"size":"none","storage":128,"unit":"GB","wifi": 21500,"cellular": "none","description":"iPhone 11"},
+                    {"size":"none","storage":256,"unit":"GB","wifi": 25000,"cellular": "none","description":"iPhone 11"}
                 ],
                 "color":[
                     {"colorID":"White","colorCode": "#F7F3F0","description": "白色"},
@@ -82,9 +82,9 @@
             {
                 "productID":"iPhone SE",
                 "model":[
-                    {"size":"none","storage":64,"unit":"GB","wi-fi": 13900,"cellular": "none","description":"iPhone SE"},
-                    {"size":"none","storage":128,"unit":"GB","wi-fi": 15500,"cellular": "none","description":"iPhone SE"},
-                    {"size":"none","storage":256,"unit":"GB","wi-fi": 19000,"cellular": "none","description":"iPhone SE"}
+                    {"size":"none","storage":64,"unit":"GB","wifi": 13900,"cellular": "none","description":"iPhone SE"},
+                    {"size":"none","storage":128,"unit":"GB","wifi": 15500,"cellular": "none","description":"iPhone SE"},
+                    {"size":"none","storage":256,"unit":"GB","wifi": 19000,"cellular": "none","description":"iPhone SE"}
                 ],
                 "color":[
                     {"colorID":"White","colorCode": "#F7F3F0","description": "白色"},
@@ -95,12 +95,12 @@
             {
                 "productID":"iPhone 12 Pro",
                 "model":[
-                    {"size":"6.1","storage":128,"unit":"GB","wi-fi": 33900,"cellular": "none","description":"iPhone 12 Pro"},
-                    {"size":"6.1","storage":256,"unit":"GB","wi-fi": 37400,"cellular": "none","description":"iPhone 12 Pro"},
-                    {"size":"6.1","storage":256,"unit":"GB","wi-fi": 44400,"cellular": "none","description":"iPhone 12 Pro"},
-                    {"size":"6.7","storage":128,"unit":"GB","wi-fi": 37900,"cellular": "none","description":"iPhone 12 Pro Max"},
-                    {"size":"6.7","storage":256,"unit":"GB","wi-fi": 41400,"cellular": "none","description":"iPhone 12 Pro Max"},
-                    {"size":"6.7","storage":512,"unit":"GB","wi-fi": 32000,"cellular": "none","description":"iPhone 12 Pro Max"}
+                    {"size":"6.1","storage":128,"unit":"GB","wifi": 33900,"cellular": "none","description":"iPhone 12 Pro"},
+                    {"size":"6.1","storage":256,"unit":"GB","wifi": 37400,"cellular": "none","description":"iPhone 12 Pro"},
+                    {"size":"6.1","storage":256,"unit":"GB","wifi": 44400,"cellular": "none","description":"iPhone 12 Pro"},
+                    {"size":"6.7","storage":128,"unit":"GB","wifi": 37900,"cellular": "none","description":"iPhone 12 Pro Max"},
+                    {"size":"6.7","storage":256,"unit":"GB","wifi": 41400,"cellular": "none","description":"iPhone 12 Pro Max"},
+                    {"size":"6.7","storage":512,"unit":"GB","wifi": 32000,"cellular": "none","description":"iPhone 12 Pro Max"}
                 ],
                 "color":[
                     {"colorID":"graphite","colorCode": "#5A5955","description": "石墨色"},
@@ -112,12 +112,12 @@
             {
                 "productID":"iPhone 12",
                 "model":[
-                    {"size":"5.4","storage":64,"unit":"GB","wi-fi": 23900,"cellular": "none","description":"iPhone 12 Mini"},
-                    {"size":"5.4","storage":128,"unit":"GB","wi-fi": 25500,"cellular": "none","description":"iPhone 12 Mini"},
-                    {"size":"5.4","storage":256,"unit":"GB","wi-fi": 29000,"cellular": "none","description":"iPhone 12 Mini"},
-                    {"size":"6.1","storage":64,"unit":"GB","wi-fi": 26900,"cellular": "none","description":"iPhone 12"},
-                    {"size":"6.1","storage":128,"unit":"GB","wi-fi": 28500,"cellular": "none","description":"iPhone 12"},
-                    {"size":"6.1","storage":256,"unit":"GB","wi-fi": 32000,"cellular": "none","description":"iPhone 12"}
+                    {"size":"5.4","storage":64,"unit":"GB","wifi": 23900,"cellular": "none","description":"iPhone 12 Mini"},
+                    {"size":"5.4","storage":128,"unit":"GB","wifi": 25500,"cellular": "none","description":"iPhone 12 Mini"},
+                    {"size":"5.4","storage":256,"unit":"GB","wifi": 29000,"cellular": "none","description":"iPhone 12 Mini"},
+                    {"size":"6.1","storage":64,"unit":"GB","wifi": 26900,"cellular": "none","description":"iPhone 12"},
+                    {"size":"6.1","storage":128,"unit":"GB","wifi": 28500,"cellular": "none","description":"iPhone 12"},
+                    {"size":"6.1","storage":256,"unit":"GB","wifi": 32000,"cellular": "none","description":"iPhone 12"}
                 ],
                 "color":[
                     {"colorID":"White","colorCode": "#F7F3F0","description": "白色"},

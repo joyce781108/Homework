@@ -86,18 +86,18 @@ network.querySelectorAll("button").forEach((x) => {
     btnDisabled("network", "text", true);
 
 
-    nav.querySelectorAll("a").forEach((x) => {
-        x.addEventListener("click", function () {
-            nav.style.top = "-100%";
-            let selectNav = x.innerText;
-            selectList = appleArray.find(y => y.name == selectNav);
-            document.querySelector("h2").innerText = `購買 ${selectNav}`
-            picData(selectNav);
-            colorBtnData(selectList);
-            colorBtnClick(selectNav);     
-            productDisplay("health-content", "inline");
-        });
-    });
+    // nav.querySelectorAll("a").forEach((x) => {
+    //     x.addEventListener("click", function () {
+    //         nav.style.top = "-100%";
+    //         let selectNav = x.innerText;
+    //         selectList = appleArray.find(y => y.name == selectNav);
+    //         document.querySelector("h2").innerText = `購買 ${selectNav}`
+    //         picData(selectNav);
+    //         colorBtnData(selectList);
+    //         colorBtnClick(selectNav);     
+    //         productDisplay("health-content", "inline");
+    //     });
+    // });
 };
 
 //v
@@ -106,14 +106,14 @@ function productDisplay(item, x) {
     className.style.display = x;
 };
 //v
-function picData(selectNav) {
-    let productPic = document.getElementsByClassName("productPic")[0];
-    img = document.createElement("img");
-    productPic.innerHTML = null;
-    productPic.appendChild(img);
-    let item = `./image/${selectNav}/all.png`;
-    img.src = item;
-};
+// function picData(selectNav) {
+//     let productPic = document.getElementsByClassName("productPic")[0];
+//     img = document.createElement("img");
+//     productPic.innerHTML = null;
+//     productPic.appendChild(img);
+//     let item = `./image/${selectNav}/all.png`;
+//     img.src = item;
+// };
 
 function colorBtnClick(selectNav) {
     color.querySelectorAll("button").forEach((x) => {
@@ -132,28 +132,28 @@ function selectColorBtn(item, selectNav) {
 };
 
 //v
-function colorBtnData(selectList) {
-    let color = selectList.color;
-    colorkeys = Object.keys(color)
-    colorGroup = document.getElementsByClassName("color-group")[0];
-    row = document.createElement("row");
-    row.className = "row";
-    colorGroup.innerHTML = null;
+// function colorBtnData(selectList) {
+//     let color = selectList.color;
+//     colorkeys = Object.keys(color)
+//     colorGroup = document.getElementsByClassName("color-group")[0];
+//     row = document.createElement("row");
+//     row.className = "row";
+//     colorGroup.innerHTML = null;
 
-    colorkeys.forEach(x => {
-        p = document.createElement("p");
-        btn = document.createElement("button");
-        span = document.createElement("span");
-        btn.className = "btn-group";
-        span.className = "color-item";
-        p.innerText = selectList.color[x];
-        span.style = `background-color:${selectList.colorCode[x]}`;
-        btn.append(span, p);
-        row.appendChild(btn);
-    });
+//     colorkeys.forEach(x => {
+//         p = document.createElement("p");
+//         btn = document.createElement("button");
+//         span = document.createElement("span");
+//         btn.className = "btn-group";
+//         span.className = "color-item";
+//         p.innerText = selectList.color[x];
+//         span.style = `background-color:${selectList.colorCode[x]}`;
+//         btn.append(span, p);
+//         row.appendChild(btn);
+//     });
 
-    colorGroup.appendChild(row);
-};
+//     colorGroup.appendChild(row);
+// };
 
 
 //v
