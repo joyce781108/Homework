@@ -3,7 +3,7 @@
         "category":"iPad",
         "product":[
             {
-                "productID":"iPadAir",
+                "productID":"iPad Air",
                 "model":[
                     {"size":"none","storage":64,"unit":"GB","wi-fi": 18900,"cellular": 23200,"description":"iPad Air"},
                     {"size":"none","storage":256,"unit":"GB","wi-fi": 23900,"cellular": 28200,"description":"iPad Air"}
@@ -29,7 +29,7 @@
                 ]
             },
             {
-                "productID":"iPadPro",
+                "productID":"iPad Pro",
                 "model":[
                     {"size":"11","storage":128,"unit":"GB","wi-fi": 25900,"cellular": 30900,"description":"iPad Pro"},
                     {"size":"11","storage":256,"unit":"GB","wi-fi": 29400,"cellular": 34400,"description":"iPad Pro"},
@@ -47,7 +47,7 @@
                 ]
             },
             {
-                "productID":"iPadMini",
+                "productID":"iPad Mini",
                 "model":[
                     {"size":"none","storage":64,"unit":"GB","wi-fi": 12900,"cellular": 17400,"description":"iPad Mini"},
                     {"size":"none","storage":256,"unit":"GB","wi-fi": 17900,"cellular": 22400,"description":"iPad Mini"}
@@ -64,7 +64,7 @@
         "category":"iPhone",
         "product":[
             {
-                "productID":"iPhone11",
+                "productID":"iPhone 11",
                 "model":[
                     {"size":"none","storage":64,"unit":"GB","wi-fi": 19900,"cellular": "none","description":"iPhone 11"},
                     {"size":"none","storage":128,"unit":"GB","wi-fi": 21500,"cellular": "none","description":"iPhone 11"},
@@ -80,7 +80,7 @@
                 ]
             },
             {
-                "productID":"iPhoneSE",
+                "productID":"iPhone SE",
                 "model":[
                     {"size":"none","storage":64,"unit":"GB","wi-fi": 13900,"cellular": "none","description":"iPhone SE"},
                     {"size":"none","storage":128,"unit":"GB","wi-fi": 15500,"cellular": "none","description":"iPhone SE"},
