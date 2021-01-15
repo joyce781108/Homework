@@ -12,50 +12,57 @@
 
   <title>Hello, world!</title>
   <style>
-    .container-fluid{
+    .container-fluid {
       padding: 20px;
     }
-    .container-fluid h1{
+
+    .container-fluid h1 {
       padding-bottom: 20px;
-      font-weight: bold;     
+      font-weight: bold;
     }
-    .container-fluid button:hover{
+
+    .container-fluid button:hover {
       background-color: black;
       color: blanchedalmond;
       transition: .3s;
     }
-    .card{
-     padding: 0;
-     background-color:#faebf0;
+
+    .card {
+      padding: 0;
+      background-color: #faebf0;
     }
-    .card:hover{
+
+    .card:hover {
       top: -4px;
-      box-shadow:5px 5px 15px black;
+      box-shadow: 5px 5px 15px black;
       transition: .4s;
     }
-    .card:hover .card-body{
+
+    .card:hover .card-body {
       background-color: turquoise;
       transition: .4s;
     }
-    .card-body{
+
+    .card-body {
       background-color: #f8bb5f;
     }
-    .card-body h5{
+
+    .card-body h5 {
       display: inline-block;
       width: 250px;
       height: 30px;
       padding: 3px 10px;
       background-color: black;
-      color:white;
+      color: white;
       border-radius: 50px;
     }
-    .modal .text-primary p{
+
+    .modal .text-primary p {
       color: black;
       font-family: monospace;
       line-height: 30px;
       font-size: 20px;
     }
-
   </style>
 </head>
 
@@ -102,7 +109,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script>
     window.onload = getPokemonJSON();
@@ -128,7 +135,7 @@
 
     function TransformData(dataArray) {
       dataArray.forEach(item => {
-       
+
         let id = item.id.toString().padStart(3, "0");
         let name = item.name.chinese;
         let hp = item.base.HP;
@@ -141,14 +148,14 @@
 
         let obj = {
           Id: id,
-          Name: name,         
+          Name: name,
           Hp: hp,
           Attack: attack,
           Defense: defense,
           Sp_Attack: sp_Attack,
           Sp_Defense: sp_Defense,
           Speed: speed,
-          Img: img                 
+          Img: img
         };
         pokemonArrayNew.push(obj)
       });
@@ -157,14 +164,14 @@
     function cardcontent() {
       let cardPokemon = document.querySelector("#cardPokemon");
       if (row.innerText == "") {
-        pokemonArrayNew.forEach(item => {        
+        pokemonArrayNew.forEach(item => {
           card = cardPokemon.content.cloneNode(true);
           card.querySelector("h5").innerText = item.Id;
           card.querySelector("p").innerText = item.Name;
           card.querySelector("img").src = item.Img;
           card.querySelector(".btn").setAttribute("data-bs-toggle", "modal");
           card.querySelector(".btn").setAttribute("data-bs-target", "#exampleModal");
-          modalcontent(card, item); 
+          modalcontent(card, item);
           row.appendChild(card);
         });
       };
@@ -186,12 +193,12 @@
       let values = Object.values(item);
       let _innerText = "";
       keys.length = 8;
-      for (var i = 2; i < keys.length ; i++) {
-        _innerText += keys[i] + ":" + values[i] + "\n";         
-        }       
-      let modalbody = document.querySelector("#description");        
-        _p.innerText = _innerText;
-        modalbody.appendChild(_p);
+      for (var i = 2; i < keys.length; i++) {
+        _innerText += keys[i] + ":" + values[i] + "\n";
+      }
+      let modalbody = document.querySelector("#description");
+      _p.innerText = _innerText;
+      modalbody.appendChild(_p);
     }
   </script>
 

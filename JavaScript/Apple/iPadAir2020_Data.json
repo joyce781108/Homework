@@ -134,30 +134,46 @@
             "model":{
                 "iPhone12Mini":{
                     "monitor":5.4,
+                    "money":23900
+                },
+                "iPhone12":{
+                    "monitor":6.1,
+                    "money":26900
+                }
+            },
+            "storage":{
+                "iPhone12Mini":{
                     "storage64": 23900,
                     "storage128": 25500,
                     "storage256": 29000
                 },
                 "iPhone12":{
-                    "monitor":6.1,
                     "storage64": 26900,
                     "storage128": 28500,
                     "storage256": 32000
                 }
             },
-            "color": {
-                "White":"白色",
-                "black":"黑色" ,
-                "blue":"藍色",
-                "green":"綠色",
-                "red":"紅色"
-            },
-            "colorCode":{
-                "White":"#F7F3F0",
-                "black":"#35313A",
-                "blue":"#12496C", 
-                "green":" #CCDDCA",
-                "red":"#DA3F3F"
+            "show": {
+                "White": {
+                    "colorCode": "#F7F3F0",
+                    "description": "白色"
+                },
+                "black": {
+                    "colorCode": "#35313A",
+                    "description": "黑色"
+                },
+                "blue": {
+                    "colorCode": "#12496C",
+                    "description": "藍色"
+                },
+                "green": {
+                    "colorCode": "#CCDDCA",
+                    "description": "綠色"
+                },
+                "red": {
+                    "colorCode": "#DA3F3F",
+                    "description": "紅色"
+                }
             }
     },
     {
