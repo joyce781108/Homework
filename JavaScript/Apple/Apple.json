@@ -97,7 +97,7 @@
                 "model":[
                     {"size":"6.1","storage":128,"unit":"GB","wifi": 33900,"cellular": "none","description":"iPhone 12 Pro"},
                     {"size":"6.1","storage":256,"unit":"GB","wifi": 37400,"cellular": "none","description":"iPhone 12 Pro"},
-                    {"size":"6.1","storage":256,"unit":"GB","wifi": 44400,"cellular": "none","description":"iPhone 12 Pro"},
+                    {"size":"6.1","storage":512,"unit":"GB","wifi": 44400,"cellular": "none","description":"iPhone 12 Pro"},
                     {"size":"6.7","storage":128,"unit":"GB","wifi": 37900,"cellular": "none","description":"iPhone 12 Pro Max"},
                     {"size":"6.7","storage":256,"unit":"GB","wifi": 41400,"cellular": "none","description":"iPhone 12 Pro Max"},
                     {"size":"6.7","storage":512,"unit":"GB","wifi": 32000,"cellular": "none","description":"iPhone 12 Pro Max"}

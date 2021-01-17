@@ -115,7 +115,7 @@ function productDisplay(item, x) {
 //     img.src = item;
 // };
 
-function colorBtnClick(selectNav) {
+function (selectNav) {
     color.querySelectorAll("button").forEach((x) => {
         x.addEventListener("click", function () {
             selectColorBtn(x, selectNav);

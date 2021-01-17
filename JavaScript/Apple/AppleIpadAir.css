@@ -100,6 +100,36 @@
 
 .size .btn-group {
   width: 410px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.size .btn-group span:first-child p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.size .btn-group span:first-child p + p {
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.size .btn-group span:last-child p {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.size span {
+  padding: 0 20px;
 }
 
 h5 {
