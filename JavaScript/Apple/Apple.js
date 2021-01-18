@@ -15,7 +15,7 @@ Array.prototype.groupBy = function (prop) {
 };
 window.onload = () => {
     appleJson();
-    productDisplay("class", "health-content", "none");
+    // productDisplay("class", "health-content", "none");
 }
 
 let url = "https://raw.githubusercontent.com/joyce781108/Homework/main/JavaScript/Apple/Apple.json"
@@ -32,9 +32,8 @@ title.querySelectorAll("a").forEach((x) => {
     x.addEventListener("click", function () {
         nav.innerHTML = "";
         selectNavData(x);
-        productDisplay("id", "total", "none")
-        // nav.style.top = "70px";
-        // selectTitleData(selectTitleList);
+        productDisplay("id", "total", "none");
+        productDisplay("id", "nav", "block")
     });
 });
 
@@ -70,6 +69,7 @@ function selectNavData(item) {
     nav.querySelectorAll("a").forEach((x) => {
         x.addEventListener("click", function () {
             productDisplay("class", "health-content", "block");
+            productDisplay("id", "nav", "none")
             dynamicallyAdd.innerHTML = null;
             let selectNav = x.innerText;
             selectArray = (selectList.product).find(y => y.productID == selectNav);
@@ -133,7 +133,7 @@ function modelBtnData(item) {
         p.innerText = sizeGroupBy[x][0].description;
         p2.innerText = `${x}吋顯示器`;
         span.append(p, p2);
-        p3.innerText = `NT$ ${sizeGroupBy[x][0].wifi}`;
+        p3.innerText = `NT$ ${sizeGroupBy[x][0].wifi.toLocaleString("zh-tw")}起`;
         p3.className = "price"
         span2.appendChild(p3);
         btn.append(span, span2);
@@ -267,8 +267,6 @@ function networkBtnData(item) {
     p4.className = "price"
     btn2.append(p3, p4);
     div.append(h5, btn, btn2);
-
-
 }
 
 function networkClick() {

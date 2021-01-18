@@ -1,11 +1,6 @@
 .title {
   width: 100%;
   background-color: #333333;
-  z-index: 1;
-}
-
-.title .container {
-  position: relative;
 }
 
 .title ul {
@@ -18,22 +13,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 0;
 }
 
 .title i {
   color: white;
   font-size: 30px;
-  padding: 0 50px;
+  padding-right: 20px;
 }
 
 .title li {
   padding: 20px 50px;
-  font-size: 30px;
 }
 
 .title a {
   color: white;
   text-decoration: none;
+  font-size: 25px;
+}
+
+.health-content .col-12:nth-child(2) {
+  margin-top: 30px;
 }
 
 .nav {
@@ -45,29 +45,31 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 .nav li {
-  padding: 20px 0;
-  font-size: 20px;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  text-align: center;
+  padding: 20px;
 }
 
 .nav i {
   display: block;
+  font-size: 30px;
   padding-bottom: 10px;
-  font-size: 40px;
 }
 
-.health-content {
-  margin-top: 50px;
+.nav a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.productPic {
+  max-width: 75%;
 }
 
 .productPic img {
@@ -75,31 +77,39 @@
 }
 
 .section-block {
-  width: 424px;
-  padding: 20px 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 20px;
 }
 
-.article {
-  margin-left: 50px;
+h5 {
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 .main-title p {
   color: #C04A03;
-  font-weight: 600;
-  padding-bottom: 10px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .main-title h2 {
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
+.btn-group {
+  border: 1px solid #D2D2D7;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 150px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
 .size .btn-group {
-  width: 410px;
+  width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,36 +126,22 @@
   font-size: 20px;
   font-weight: bold;
   font-family: sans-serif;
+  margin: 0;
 }
 
 .size .btn-group span:first-child p + p {
   font-size: 10px;
-  line-height: 20px;
+  font-family: sans-serif;
 }
 
 .size .btn-group span:last-child p {
   font-size: 20px;
   font-family: sans-serif;
+  margin: 0;
 }
 
 .size span {
   padding: 0 20px;
-}
-
-h5 {
-  font-weight: 800;
-}
-
-.btn-group {
-  border: 1px solid #D2D2D7;
-  background-color: white;
-  width: 200px;
-  padding: 20px 0;
-  border-radius: 10px;
-  display: inline-block;
-  line-height: 25px;
-  margin-top: 10px;
-  margin-right: 10px;
 }
 
 .exterior .color-item {
@@ -158,10 +154,27 @@ h5 {
 .exterior p {
   font-size: 12px;
   color: #545457;
+  margin: 0;
 }
 
 .storageDevice span {
-  font-size: 29px;
+  font-size: 25px;
+}
+
+.storageDevice sup {
+  font-size: 10px;
+}
+
+.storageDevice p {
+  margin: 0;
+}
+
+.connectivity p:first-child {
+  font-size: 16px;
+}
+
+.connectivity p {
+  margin: 0;
 }
 
 .text :nth-child(1) {
@@ -170,29 +183,90 @@ h5 {
 }
 
 p + p {
-  font-size: 12px;
-}
-
-.connectivity :nth-child(1) {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .total {
   background-color: #FBFBFD;
-  padding: 30px;
+  margin-top: 20px;
+  padding: 15px;
 }
 
 .total p {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
 }
 
 .total .btn {
   font-size: 17px;
-  width: 300px;
+  width: 250px;
   height: 30px;
   line-height: 2px;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .productPic {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  .title li {
+    padding: 15px 25px;
+  }
+  .title i {
+    color: white;
+    font-size: 30px;
+  }
+  .main-title h2 {
+    font-size: 25px;
+  }
+  .btn-group {
+    width: 160px;
+  }
+  .size .btn-group span:first-child p {
+    font-size: 17px;
+  }
+  .size .btn-group span:last-child p {
+    font-size: 17px;
+    font-family: sans-serif;
+  }
+  .size span {
+    padding: 0 10px;
+  }
+  .connectivity p:first-child {
+    font-size: 17px;
+  }
+  p + p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title a {
+    font-size: 30px;
+  }
+  .title i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title li {
+    padding: 20px 80px;
+  }
+  .title i {
+    padding-right: 40px;
+  }
+  h5 {
+    font-size: 30px;
+  }
+  .btn-group {
+    width: 200px;
+  }
+  .size .btn-group {
+    width: 410px;
+  }
 }
 /*# sourceMappingURL=AppleIpadAir.css.map */
