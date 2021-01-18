@@ -3,8 +3,8 @@ let nav = document.getElementById("nav");
 let dynamicallyAdd = document.getElementById("dynamicallyAdd");
 let appleArray = [];
 let selectArray = [];
-let _total, selectTitle;
-
+let _total = document.getElementById("total");
+let selectTitle;
 Array.prototype.groupBy = function (prop) {
     return this.reduce(function (groups, item) {
         const val = item[prop]
@@ -232,6 +232,7 @@ function storageBtnClick() {
             productDisplay("id", "total", "block")
             selectStorageBtn(x);
             if (selectTitle != "iPhone") {
+                productDisplay("id", "total", "none")
                 btnDisabled("network", "text", false);
             }
         });
@@ -273,6 +274,7 @@ function networkClick() {
     let network = document.getElementById("network");
     network.querySelectorAll("button").forEach((x) => {
         x.addEventListener("click", function () {
+            productDisplay("id", "total", "block")
             selectNetworkBtn(x);
         });
     });
@@ -335,7 +337,6 @@ function selectNetworkBtn(item) {
 }
 
 function total(item, price, network) {
-    _total = document.getElementById("total");
     let priceText = price;
     let itemText = item.find(x => `NT$ ${x.wifi.toLocaleString("zh-tw")} 起` == priceText)
     if (network == "wifi") {
