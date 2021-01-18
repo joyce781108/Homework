@@ -15,7 +15,7 @@ Array.prototype.groupBy = function (prop) {
 };
 window.onload = () => {
     appleJson();
-    // productDisplay("class", "health-content", "none");
+    productDisplay("class", "health-content", "none");
 }
 
 let url = "https://raw.githubusercontent.com/joyce781108/Homework/main/JavaScript/Apple/Apple.json"
