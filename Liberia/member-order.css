@@ -1,0 +1,132 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    padding: 0;
+}
+p{
+    margin: 0;
+}
+.section-block{
+    padding: 15px 10px 0;
+}
+
+
+
+.order__title{
+    text-align: center;
+    background-color: rgba(176, 176, 176, 1);
+}
+.order__title h2{
+    color:rgba(138, 105, 38, 1);
+    font-weight: 800;
+    background-color: rgba(227,227,227, 1);
+    width: 100%;
+    font-size: 25px;
+    margin: 0;
+    padding: 10px 0;
+}
+.order__title p{
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+.title__item{
+    padding-top: 10px;
+}
+.title__item--narrow-only {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+
+.order__inquire{
+    display: none;
+}
+.inquire__narrow-only--title span{
+    color: rgba(176, 176, 176, 1);
+}
+.search__title{
+    border: 1px  rgba(176, 176, 176, 1) solid;
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search__list{
+    padding:10px;
+    border: 1px  rgba(176, 176, 176, 1) solid;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 40px;
+    display: none;
+}
+.search__list ul{
+    margin: 0;
+}
+.search__list li:hover{
+    background-color:  rgba(227,227,227, 1);
+}
+
+
+.order__content{
+    font-size: 17px;
+}
+.decoration {
+    border-bottom: 7px rgba(227,227,227, 1) solid;
+}
+h3{
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+em{
+    position: relative;
+}
+em::before{
+    content: '';
+    border-bottom: 7px rgba(138, 105, 38, 1) solid;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+}
+.content__title span{
+    display: none;
+}
+.content__list table{
+    width: 100%;
+}
+.content__list thead{
+    display: none;
+}
+.content__list td{
+    display: block;
+    line-height: 40px;
+}
+.content__list tbody td:nth-child(1){
+    padding-top: 15px;
+}
+.content__list tr{
+    border-bottom: 2px rgba(176, 176, 176, 1) solid;
+}
+.content__list tr:last-child{
+    border-bottom: none
+}
+
+
+.order__remarks{
+    border-top: 70px rgba(227,227,227, 1) solid;
+}
+.order__remarks ul{
+    padding-top: 15px;
+    
+}
+.order__remarks li{
+    list-style-type:disc;
+    margin-left: 20px;
+}
