@@ -24,8 +24,8 @@
             <div class="order__title">
                 <h2>訂單查詢</h2>
                 <div class="title__item">
-                    <p>7-11逾期未領退回: <span>0</span>件</p>
-                    <p>客樂得未領退回: <span>0</span>件</p>
+                    <p>7-11逾期未領退回: <span>0</span> 件</p>
+                    <p>客樂得未領退回: <span>0</span> 件</p>
                 </div>
                 <div class="title__item--narrow-only">
                     <p>未出貨: <span>0</span></p>
@@ -40,7 +40,7 @@
                 <div class="inquire__narrow-only--search">
                     <div id="inquire" class="search__title">
                         <p>一個月內訂單</p>
-                        <i class="fas fa-angle-down"></i> 
+                        <i class="fas fa-angle-down"></i>
                     </div>
                     <div class="search__list">
                         <ul>
@@ -55,37 +55,47 @@
             </div>
             <div class="order__inquire section-block">
                 <table>
-                    <tr>
-                        <th>查詢條件</th>
-                        <td>
-                            <input type="radio" name="inquire" value="one-month" id="one-month" checked>
-                            <label form="one-month">一個月內訂單</label>
-                            <input type="radio" name="inquire" value="not-Shipped" id="not-Shipped">
-                            <label form="not-Shipped">未出貨訂單</label>
-                            <input type="radio" name="inquire" value="return" id="return">
-                            <label form="return">退換貨訂單</label>
-                            <input type="radio" name="inquire" value="six-months">
-                            <label form="six-months">六個月內訂單(含出貨後)</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>訂單編號</th>
-                        <td>
-                            <input type="radio" name="inquire" value="numbering" id="numbering">
-                            <label form="numbering"> </label>
-                        </td>
-                        <td><input type="text" id="transa-ctionid" name="transa-ctionid" maxlength="" minlength=""></td>
-                    </tr>
+                    <colgroup>
+                        <col width=15%>
+                        <col width=85%>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>查詢條件</th>
+                            <td>
+                                <input type="radio" name="inquire" value="one-month" id="one-month" checked>
+                                <label for="one-month">一個月內訂單</label>
+                                <input type="radio" name="inquire" value="not-Shipped" id="not-Shipped">
+                                <label for="not-Shipped">未出貨訂單</label>
+                                <input type="radio" name="inquire" value="return" id="return">
+                                <label for="return">退換貨訂單</label>
+                                <input type="radio" name="inquire" value="six-months" id="six-months">
+                                <label for="six-months">六個月內訂單(含出貨後)</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>訂單編號</th>
+                            <td>
+                                <input type="radio" name="inquire" value="numbering" id="numbering">
+                                <label for="numbering"> &nbsp;</label>
+                                <input type="text" id="transa-ctionid" name="transa-ctionid" maxlength="" minlength="">
+                            </td>
+                            </td>
+                        </tr>
+                    </tbody>
+
                 </table>
                 <p>目前僅提供六個月內的交易資料，若您欲查詢六個月前的資料，請您與<a href="#">客服中心</a>聯繫</p>
-                <button class="inquire__btn">查詢</button>
+                <div class="inquire__btn">
+                    <button>查詢</button>
+                </div>
             </div>
         </div>
         <div class="order__content section-block">
             <div class="content__title decoration">
                 <h3>
-                    <em>一個月內訂單</em> 
-                    <span>共0筆訂單</span>
+                    <em>一個月內訂單</em>
+                    <span>共 <cite>0</cite> 筆訂單</span>
                 </h3>
             </div>
             <div class="content__list">
@@ -164,7 +174,27 @@
                 </table>
             </div>
         </div>
-        
+
+        <div class="Pagination">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="order__remarks section-block">
             <div class="remarks__title decoration">
                 <h3> <em>備註/說明</em> </h3>
@@ -185,7 +215,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script  src="/Liberia/member-order.js"></script>
+    <script src="/Liberia/member-order.js"></script>
 
 </body>
 
