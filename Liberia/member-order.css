@@ -62,7 +62,7 @@ input[type=radio]{
     padding-left: 20px;
     position: relative;
 }
-.order__inquire label::before{
+input[type="radio"]:checked + label::after{
     content: '';
     display: inline-block;
     width: 10px;
@@ -73,10 +73,10 @@ input[type=radio]{
     top: 7.5px;
     background-color: rgba(176, 176, 176, 1);
 }
-.order__inquire  label::after{
+.order__inquire  label::before{
     content: '';
     border: 1px rgba(176, 176, 176, 1) solid;
-    /* background-color: white; */
+    background-color: white;
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -89,8 +89,12 @@ input[type=radio]{
 input[type=text]{
     font-size: 16px;
     border-radius: 10px;
-    border: 1px solid rgba(176, 176, 176, 1);
+    border: 2px solid rgba(176, 176, 176, 1);
+    outline:none;
+    padding: 2px 10px;
 }
+
+
 .order__inquire p{
     padding-top: 10px;
 }
@@ -146,7 +150,7 @@ em::before{
     line-height: 40px;
 }
 .content__list tbody td:nth-child(1){
-    padding: 15px 0;
+    padding-top: 15px;
 }
 .content__list tr{
     border-bottom: 2px rgba(176, 176, 176, 1) solid;
@@ -156,8 +160,16 @@ em::before{
 }
 
 
-.Pagination{
-    
+.min-Pagination{
+    background-color: rgba(176, 176, 176, 1);
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+}
+.pagination{
+    margin: 0;
 }
 .order__remarks ul{
     padding-top: 15px;
@@ -183,7 +195,7 @@ em::before{
         color: rgba(176, 176, 176, 1);
     }
     .search__title{
-        border: 1px  rgba(176, 176, 176, 1) solid;
+        border: 1px  rgb(15, 10, 10) solid;
         height: 50px;
         border-radius: 5px;
         padding: 0 10px;
@@ -191,6 +203,7 @@ em::before{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
     .search__list{
         padding:10px;
