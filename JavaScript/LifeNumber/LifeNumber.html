@@ -83,7 +83,7 @@
       <div id="content" class="health-content">
         <p><span id="date" class="date">2019-10-17</span>出生的你，星座是 <span id="constellationName" class="constellationName">天秤座</span></p>
         <p id="number">生命靈數:</p>
-        <p id="data"></p>
+        <p id="data"> </p>
       </div>
 
     </div>
@@ -164,7 +164,7 @@
     function data(constellation, number) {
       $.ajax({
         type: "Get",
-        url: "http://buildschoolapi.azurewebsites.net/api/number/GetNumerology",
+        url: "https://buildschoolapi.azurewebsites.net/api/number/GetNumerology",
         data: {
           constellation: constellation,
           number: number
